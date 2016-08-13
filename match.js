@@ -1,6 +1,6 @@
 var products = null;
 
-function LoadProducts() {
+function LoadData(file) {
   var oFrame = document.getElementById("frmFile");
   var rawProducts = oFrame.contentWindow.document.body.childNodes[0].innerHTML;	
   
@@ -10,4 +10,5 @@ function LoadProducts() {
 
   products = JSON.parse('['+rawProducts+']');
   console.log("ok", products);
+  console.log("file?", file);
 }
