@@ -10,7 +10,7 @@ function LoadProducts() {
   }
 
   products = JSON.parse('['+rawProducts+']');
-  document.getElementById("product-log").value = "Loaded "+products.length+" products successfully";
+  document.getElementById("product-log").innerHTML = "Loaded "+products.length+" products successfully";
 }
 
 function LoadListings() {
@@ -22,5 +22,4 @@ function LoadListings() {
   }
 
   listings = JSON.parse('['+rawListings+']');
-  console.log("ok", listings[0]);
 }
