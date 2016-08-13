@@ -25,5 +25,5 @@ function LoadListings() {
   listings = JSON.parse('['+rawListings+']');
   document.getElementById("listing-log").innerHTML = "Loaded "+ listings.length +" Listings";  
 
-  document.getElementById("analysis-log").innerHTML += "Beginning Analysis<br>";
+  document.getElementById("analysis-log").innerHTML = "Beginning Analysis<br>";
 }
