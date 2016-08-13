@@ -10,7 +10,7 @@ function LoadProducts() {
   }
 
   products = JSON.parse('['+rawProducts+']');
-  console.log("ok", products);
+  console.log("ok", products[0]);
 }
 
 function LoadListings() {
@@ -22,5 +22,5 @@ function LoadListings() {
   }
 
   listings = JSON.parse('['+rawListings+']');
-  console.log("ok", listings);
+  console.log("ok", listings[0]);
 }
