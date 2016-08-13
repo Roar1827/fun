@@ -4,8 +4,8 @@ function LoadProducts() {
   var oFrame = document.getElementById("frmFile");
   var rawProducts = oFrame.contentWindow.document.body.childNodes[0].innerHTML;	
   
-  while (rawProducts.indexOf("\r") >= 0) {
-    rawProducts = rawProducts.replace("\r", ",");
+  while (rawProducts.indexOf("\n") >= 0) {
+    rawProducts = rawProducts.replace("\n", ",");
   }
   //while (rawProducts.indexOf("\r") >= 0) {
   //  rawProducts = rawProducts.replace("\n", ",");;
