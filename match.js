@@ -2,15 +2,15 @@ var products = null;
 
 function LoadProducts() {
   var oFrame = document.getElementById("frmFile");
-  var strRawContents = oFrame.contentWindow.document.body.childNodes[0].innerHTML;	
+  var rawProducts = oFrame.contentWindow.document.body.childNodes[0].innerHTML;	
   
-  while (strRawContents.indexOf("\r") >= 0) {
-    strRawContents = strRawContents.replace("\r", "");
+  while (rawProducts.indexOf("\r") >= 0) {
+    rawProducts = rawProducts.replace("\r", "").replace("\n", ",");
   }
-  products = strRawContents.split("\n");
+  //products = strRawContents.split("\n");
   //products = products.map(JSON.parse);  	
 
-  products = JSON.parse('['+s.join(',')+']');
+  products = JSON.parse('['+rawProducts.join(',')+']');
 
   console.log("ok", products);
 }
