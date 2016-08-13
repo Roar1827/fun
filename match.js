@@ -14,13 +14,14 @@ function LoadProducts() {
 }
 
 function LoadListings() {
-  //var oFrame = document.getElementById("listFile");
-  //var rawListings = oFrame.contentWindow.document.body.childNodes[0].innerHTML;	
+  document.getElementById("listing-log").innerHTML = "Loaded Listings File"; 	
+  var oFrame = document.getElementById("listFile");
+  var rawListings = oFrame.contentWindow.document.body.childNodes[0].innerHTML;	
   
-  //while (rawListings.indexOf("\n") >= 0) {
-  //  rawListings = rawListings.replace("\n", ",");
-  //}
+  while (rawListings.indexOf("\n") >= 0) {
+    rawListings = rawListings.replace("\n", ",");
+  }
 
-  //listings = JSON.parse('['+rawListings+']');
-  document.getElementById("listing-log").innerHTML = "Loaded Listings File";  
+  listings = JSON.parse('['+rawListings+']');
+  document.getElementById("listing-log").innerHTML = "Loaded "+listings.length +"Listings";  
 }
