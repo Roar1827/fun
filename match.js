@@ -5,11 +5,11 @@ function LoadProducts() {
   var rawProducts = oFrame.contentWindow.document.body.childNodes[0].innerHTML;	
   
   while (rawProducts.indexOf("\r") >= 0) {
-    rawProducts = rawProducts.replace("\r", "");
+    rawProducts = rawProducts.replace("\r", ",");
   }
-  while (rawProducts.indexOf("\r") >= 0) {
-    rawProducts = rawProducts.replace("\n", ",");;
-  }
+  //while (rawProducts.indexOf("\r") >= 0) {
+  //  rawProducts = rawProducts.replace("\n", ",");;
+  //}
   
   //products = strRawContents.split("\n");
   //products = products.map(JSON.parse);  	
