@@ -1,6 +1,7 @@
 var products = null;
+var listings = null;
 
-function LoadData(file) {
+function LoadProducts() {
   var oFrame = document.getElementById("frmFile");
   var rawProducts = oFrame.contentWindow.document.body.childNodes[0].innerHTML;	
   
@@ -10,5 +11,16 @@ function LoadData(file) {
 
   products = JSON.parse('['+rawProducts+']');
   console.log("ok", products);
-  console.log("file?", file);
+}
+
+function LoadListings() {
+  var oFrame = document.getElementById("frmFile");
+  var rawListings = oFrame.contentWindow.document.body.childNodes[0].innerHTML;	
+  
+  while (rawListings.indexOf("\n") >= 0) {
+    rawListings = rawListings.replace("\n", ",");
+  }
+
+  listings = JSON.parse('['+rawListings+']');
+  console.log("ok", listings);
 }
