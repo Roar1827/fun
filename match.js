@@ -8,7 +8,7 @@ function LoadProducts() {
     strRawContents = strRawContents.replace("\r", "");
   }
   products = strRawContents.split("\n");
-  products = products.map(JSON.parse);  	
+  //products = products.map(JSON.parse);  	
 
   console.log("ok", products);
 }
