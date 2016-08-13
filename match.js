@@ -10,5 +10,7 @@ function LoadProducts() {
   products = strRawContents.split("\n");
   //products = products.map(JSON.parse);  	
 
-  console.log("ok", JSON.parse(products[0]));
+  products = JSON.parse('['+s.join(',')+']');
+
+  console.log("ok", products);
 }
