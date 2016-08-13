@@ -7,7 +7,7 @@ function LoadProducts() {
   while (strRawContents.indexOf("\r") >= 0) {
     strRawContents = strRawContents.replace("\r", "");
   }
-  products = strRawContents.split("\n");  	
+  products = strRawContents.split("\n").map(JSON.parse);  	
 
   console.log("ok", products);
 }
